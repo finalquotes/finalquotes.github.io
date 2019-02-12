@@ -60,3 +60,7 @@ maintain it's composure. Be still... his whisper isn't heard by the others, and 
 
 2015-04-23 18:20:24	&Torrential	it's like a loli in my throat
 
+---
+
+2015-08-11 20:20:40  \|  Torrential fucking murders illu
+

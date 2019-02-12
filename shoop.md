@@ -17,3 +17,7 @@ permalink: /shoop/
 ---
 
 2015-04-14 21:06:17	@shoop	ive never used a buttplug that skinny
+
+---
+
+2015-08-08 15:01:20  +Shoop  Torrential teach me how to smoke with nuts
