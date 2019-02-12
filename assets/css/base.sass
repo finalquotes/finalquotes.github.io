@@ -1,0 +1,483 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+//* --------- */
+//* Variables */
+//* --------- */
+$font-sans: "Share Tech Mono", "Open Sans", sans-serif
+$font-mono: "Share Tech Mono", "Open Sans Mono", "Noto Mono", monospace
+$transition: color 0.10s ease-in-out, background-color 0.10s ease-in-out, border-color 0.10s ease-in-out
+
+// Colors
+$bg-color: #253C53
+$text-color: #DAF2FF
+$foot-color: #33303b
+$highlight-color: #F08B46
+$link-color: #DAF2FF
+$link-color-focus: $highlight-color
+$active-color: #222
+$active-color-fg: #fff
+$filled-color: $bg-color
+$filled-color-fg: $highlight-color
+$nav-color: #2d323e
+$nav-color-fg: #fff
+$card-color-bg: #fff
+
+// Shadows (Taken from https://codepen.io/sdthornton/pen/wBZdXq)
+$shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+$shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+$shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+$shadow-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+$shadow-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+
+/* ------------------- */
+/* Import default font */
+/* ------------------- */
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Assistant')
+
+/* ----------- */
+/* Base styles */
+/* ----------- */
+html, body
+  height: 100%
+html
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  text-size-adjust: 100%
+  font:
+    family: sans-serif
+    size: 62.5%
+body
+  margin: 0
+  color: $text-color
+  background-color: $bg-color
+  font:
+    size: 1.5rem
+    weight: 400
+    family: $font-sans
+
+/* ------- */
+/* Headers */
+/* ------- */
+h1, h2, h3,
+h4, h5, h6
+  color: $highlight-color
+  margin-top: 0
+  margin-bottom: 1.5rem
+  font-weight: 300
+h1
+  font-size: 4.2rem
+  letter-spacing: -0.1rem
+h2
+  font-size: 3.8rem
+  letter-spacing: -0.1rem
+h3
+  font-size: 3.2rem
+  letter-spacing: -0.1rem
+h4
+  font-size: 2.4rem
+  letter-spacing: -0.07rem
+h5
+  font-size: 2rem
+  letter-spacing: -0.05rem
+h6
+  font-size: 1.5rem
+.row
+  &.title
+    margin-bottom: 2.5rem
+    
+
+/* ----- */
+/* Links */
+/* ----- */
+a
+  color: $link-color
+  -webkit-transition: color 0.08s
+  -moz-transition: color 0.08s
+  -o-transition: color 0.08s
+  transition: color 0.08s
+  text-decoration: none
+  &:hover, &:focus
+    color: $link-color-focus
+    
+
+/* ------- */
+/* Buttons */
+/* ------- */
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"]
+  display: inline-block
+  height: 3.5rem
+  padding: 0 2rem
+  color: $text-color
+  border-radius: 2px
+  line-height: 3.5rem
+  letter-spacing: 0.15rem
+  font-size: 1.25rem
+  white-space: nowrap
+  -webkit-transition: $transition
+  -moz-transition: $transition
+  -o-transition: $transition
+  transition: $transition
+  text:
+    align: center
+    decoration: none
+    transform: uppercase
+  &:focus,
+  &:hover
+    color: $active-color-fg
+    background-color: lighten($bg-color, 10%)
+  &.filled
+    color: $filled-color-fg
+    background-color: $filled-color
+  &.disabled
+    pointer-events: none
+    color: #999
+  &.filled.disabled
+    pointer-events: none
+    color: darken($filled-color-fg, 45%)
+    background-color: transparentize($active-color, 0.7)
+    border-color: transparentize($active-color, 1)
+
+/* ---------- */
+/* Containers */
+/* ---------- */
+.container
+  margin: 0 auto
+  padding: 6rem 0
+  width: 100%
+  position: relative
+  @media (max-width: 399px)
+    width: 90%
+  @media (min-width: 400px)
+    width: 85%
+  @media (min-width: 550px)
+    width: 80%
+
+.row
+  margin-bottom: 1.5rem
+  &:last-child
+    margin-bottom: 0
+
+/* ------- */
+/* Columns */
+/* ------- */
+
+/*
+ * There are multiple `.column` sub-classes. Each has a varied length
+ *
+ * .half                    - Half of the grid    (same size as .six)
+ * .full                    - Full grid           (same size as .twelve)
+ * .one-third, .two-thirds  - One/two thirds
+ * .one-fourth              - One fourth          (same size as .three)
+ * .one, .two, .three, etc  - Self explanatory
+ * .offset-*                - Offset the column by specified amount i.e,
+ *                            .offset-five will offset the column by five column
+ *                            spaces. Use in conjunction with the other sizes.
+ */
+
+.column,
+.columns
+  width: 100%
+  float: left
+  box-sizing: border-box
+  margin-bottom: 1.5rem
+  margin-left: 4%
+.column
+  @media (min-width: 550px)
+    &:first-child,
+    &s:first-child
+      margin-left: 0
+    &.half,
+    &.six
+      width: 48%
+    &.full,
+    &.twelve
+      width: 100%
+      margin-left: 0
+    &.one-third
+      width: 30.6666666667%
+    &.two-thirds
+      width: 65.3333333333%
+    &.one-fourth,
+    &.three
+      width: 22%
+    &.one
+      width: 4.66666666667%
+    &.two
+      width: 13.3333333333%
+    &.four
+      width: 30.6666666667%
+    &.five
+      width: 39.3333333333%
+    &.seven
+      width: 56.6666666667%
+    &.eight
+      width: 65.3333333333%
+    &.nine
+      width: 74.0%
+    &.ten
+      width: 82.6666666667%
+    &.eleven
+      width: 91.3333333333%
+    &.offset-half,
+    &.offset-six
+      margin-left: 52%
+    &.offset-one-third
+      margin-left: 34.6666666667%
+    &.offset-two-thirds
+      margin-left: 69.3333333333%
+    &.offset-one-fourth
+      margin-left: 26%
+    &.offset-one
+      margin-left: 8.66666666667%
+    &.offset-two
+      margin-left: 17.3333333333%
+    &.offset-three
+      margin-left: 26%
+    &.offset-four
+      margin-left: 34.6666666667%
+    &.offset-five
+      margin-left: 43.3333333333%
+    &.offset-seven
+      margin-left: 60.6666666667%
+    &.offset-eight
+      margin-left: 69.3333333333%
+    &.offset-nine
+      margin-left: 78.0%
+    &.offset-ten
+      margin-left: 86.6666666667%
+    &.offset-eleven
+      margin-left: 95.3333333333%
+  @media (max-width: 549px)
+    margin-bottom: 2.5rem
+
+/* ---- */
+/* Code */
+/* ---- */
+/* I recommend you use Prettify to help with this */
+pre
+  overflow: visible
+code
+  font:
+    family: $font-mono
+    size: 14pt
+span, p
+  &.code
+    padding: 0.4rem
+    font-family: $font-mono
+
+/* ------ */
+/* Tables */
+/* ------ */
+table
+  width: 100%
+  border: 1px dashed #ccc
+  border-collapse: collapse
+  border-radius: 3px
+  margin-bottom: 1.5rem
+  tr
+    th
+      border: 1px solid #ccc
+      border-radius: 2px
+    td
+      border: 1px dashed #ccc
+    td, th
+      padding: 1.5rem
+      font-size: 10pt
+      border-radius: 3px
+  &.striped
+    border: 1px solid #ccc
+    tr:nth-child(even)
+      background-color: #fafafa
+  @media (min-width: 600px)
+    width: 60%
+
+/* ----- */
+/* Cards */
+/* ----- */
+.card
+  background-color: darken($bg-color, 2.5%)
+  width: 40rem
+  padding: 5rem
+  //border-radius: 2px
+  margin-bottom: 2.5rem !important
+  margin: auto
+  &:first-child,
+  &s:first-child
+    margin-top: 5rem !important
+  &.depth-1
+    box-shadow: $shadow-1
+  &.depth-2
+    box-shadow: $shadow-2
+  &.depth-3
+    box-shadow: $shadow-3
+  &.depth-4
+    box-shadow: $shadow-4
+  &.depth-5
+    box-shadow: $shadow-5
+
+.card-disabled
+  margin-top: -2.5rem
+  margin: -5rem auto
+  .card-title
+    color: $text-color
+    &:hover
+      color: $highlight-color
+      cursor: pointer
+
+.card-title
+  color: $highlight-color
+  text-align: center
+  font-size: 2rem
+  margin-bottom: 2rem
+
+/* ------ */
+/* Footer */
+/* ------ */
+.footer
+  width: 60rem
+  text-align: center
+  margin: -20% auto
+  height: 2rem
+  color: $foot-color
+  a
+    text:
+      decoration: none
+      //transform: uppercase
+    color: inherit
+  a:hover
+    color: $link-color-focus
+
+/* ------ */
+/* Custom */
+/* ------ */
+@mixin truncate($width)
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  width: $width
+input,
+textarea
+  background-color: inherit
+  color: $text-color
+  border: none
+  font-family: $font-mono
+input[type="submit"]
+  cursor: pointer
+.homepage
+  display: flex
+  flex-direction: column
+  justify-content: center
+  .head
+    width: 100%
+    color: $text-color
+    text-align: center
+    .container
+      padding: 10rem 0 0 0
+      .title
+
+        font-size: 4.5rem
+        letter-spacing: 0.5rem
+        a
+          vertical-align: middle
+          text-decoration: none
+          color: $text-color
+
+  .hidden
+    opacity: 0
+
+.main
+  display: flex
+  flex-direction: column
+  .head
+    width: 100%
+    background-color: darken($bg-color, 2.5%)
+    color: $text-color
+    text-align: left
+    .alt
+      color: $highlight-color !important
+    .container
+      padding: 2rem 0
+      .row
+        display: flex
+        width: 100%
+        &.reverse
+          justify-content: flex-end
+        .title
+          font-size: 2.5rem
+          letter-spacing: 0.5rem
+          vertical-align: middle
+          margin: auto
+          a
+            text-decoration: none
+            color: $text-color
+        .search-box
+          width: 20rem
+  .main
+    font-family: $font-mono
+    .container
+      padding: 6rem
+
+  .motd
+    p
+      margin: 0 1.5rem
+  .post-list
+    display: flex
+    flex-direction: row
+    min-height: 15rem
+    max-height: 50rem
+    .link-list
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: space-evenly
+      flex-shrink: 1
+      .thread-link
+        @include truncate(15rem)
+  .users
+    display: flex
+    margin: 0 1.5rem
+    flex-direction: column
+    flex-wrap: wrap
+    flex-shrink: 0
+    height: auto
+    justify-content: space-evenly
+    a::before
+      content: ">> "
+      color: $highlight-color
+  .post-form
+    margin: 0 1.5rem
+    display: flex
+    flex-direction: row
+    form
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: space-evenly
+      width: 30rem
+      min-height: 20rem
+hr
+  border: 1px dashed darken($bg-color, 5%)
+  width: 70%
+.back-link::before
+  content: "<< "
+  color: $highlight-color
+
+.timestamp
+  color: darken($text-color, 25%)
+.nick
+  color: lighten($highlight-color, 10%)
+/* -------- */
+/* Clearing */
+/* -------- */
+.container:after,
+.row:after
+  content: ""
+  clear: both
+  display: table
+
+  

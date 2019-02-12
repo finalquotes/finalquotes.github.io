@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="card desc">
+  <div class="card-title">ayy lmao</div>
+  {% if page.description %}
+    <p>{{ page.description }}</p>
+  {% else %}
+    <p>{{ site.description }}</p>
+  {% endif %}
+</div>
+
+<div class="card usr-list">
+  <div class="card-title">users</div>
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.header_pages | default: default_paths -%}
+  <div class="users">
+    {%- for path in page_paths -%}
+      {%- assign my_page = site.pages | where: "path", path | first -%}
+      {%- if my_page.title -%}
+        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+

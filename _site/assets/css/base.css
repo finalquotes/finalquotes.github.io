@@ -1,0 +1,462 @@
+/* ------------------- */
+/* Import default font */
+/* ------------------- */
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono|Assistant");
+/* ----------- */
+/* Base styles */
+/* ----------- */
+html, body {
+  height: 100%; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: sans-serif;
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  color: #DAF2FF;
+  background-color: #253C53;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Share Tech Mono", "Open Sans", sans-serif; }
+
+/* ------- */
+/* Headers */
+/* ------- */
+h1, h2, h3,
+h4, h5, h6 {
+  color: #F08B46;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 300; }
+
+h1 {
+  font-size: 4.2rem;
+  letter-spacing: -0.1rem; }
+
+h2 {
+  font-size: 3.8rem;
+  letter-spacing: -0.1rem; }
+
+h3 {
+  font-size: 3.2rem;
+  letter-spacing: -0.1rem; }
+
+h4 {
+  font-size: 2.4rem;
+  letter-spacing: -0.07rem; }
+
+h5 {
+  font-size: 2rem;
+  letter-spacing: -0.05rem; }
+
+h6 {
+  font-size: 1.5rem; }
+
+.row.title {
+  margin-bottom: 2.5rem; }
+
+/* ----- */
+/* Links */
+/* ----- */
+a {
+  color: #DAF2FF;
+  -webkit-transition: color 0.08s;
+  -moz-transition: color 0.08s;
+  -o-transition: color 0.08s;
+  transition: color 0.08s;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #F08B46; }
+
+/* ------- */
+/* Buttons */
+/* ------- */
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  display: inline-block;
+  height: 3.5rem;
+  padding: 0 2rem;
+  color: #DAF2FF;
+  border-radius: 2px;
+  line-height: 3.5rem;
+  letter-spacing: 0.15rem;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  -webkit-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  -o-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .button:focus, .button:hover,
+  button:focus,
+  button:hover,
+  input[type="button"]:focus,
+  input[type="button"]:hover,
+  input[type="submit"]:focus,
+  input[type="submit"]:hover,
+  input[type="reset"]:focus,
+  input[type="reset"]:hover {
+    color: #fff;
+    background-color: #355676; }
+  .button.filled,
+  button.filled,
+  input[type="button"].filled,
+  input[type="submit"].filled,
+  input[type="reset"].filled {
+    color: #F08B46;
+    background-color: #253C53; }
+  .button.disabled,
+  button.disabled,
+  input[type="button"].disabled,
+  input[type="submit"].disabled,
+  input[type="reset"].disabled {
+    pointer-events: none;
+    color: #999; }
+  .button.filled.disabled,
+  button.filled.disabled,
+  input[type="button"].filled.disabled,
+  input[type="submit"].filled.disabled,
+  input[type="reset"].filled.disabled {
+    pointer-events: none;
+    color: #4a2206;
+    background-color: rgba(34, 34, 34, 0.3);
+    border-color: rgba(34, 34, 34, 0); }
+
+/* ---------- */
+/* Containers */
+/* ---------- */
+.container {
+  margin: 0 auto;
+  padding: 6rem 0;
+  width: 100%;
+  position: relative; }
+  @media (max-width: 399px) {
+    .container {
+      width: 90%; } }
+  @media (min-width: 400px) {
+    .container {
+      width: 85%; } }
+  @media (min-width: 550px) {
+    .container {
+      width: 80%; } }
+
+.row {
+  margin-bottom: 1.5rem; }
+  .row:last-child {
+    margin-bottom: 0; }
+
+/* ------- */
+/* Columns */
+/* ------- */
+/* There are multiple `.column` sub-classes. Each has a varied length
+ *
+ * .half                    - Half of the grid    (same size as .six)
+ * .full                    - Full grid           (same size as .twelve)
+ * .one-third, .two-thirds  - One/two thirds
+ * .one-fourth              - One fourth          (same size as .three)
+ * .one, .two, .three, etc  - Self explanatory
+ * .offset-*                - Offset the column by specified amount i.e,
+ *                            .offset-five will offset the column by five column
+ *                            spaces. Use in conjunction with the other sizes.
+ */
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  margin-left: 4%; }
+
+@media (min-width: 550px) {
+  .column:first-child, .columns:first-child {
+    margin-left: 0; }
+  .column.half, .column.six {
+    width: 48%; }
+  .column.full, .column.twelve {
+    width: 100%;
+    margin-left: 0; }
+  .column.one-third {
+    width: 30.6666666667%; }
+  .column.two-thirds {
+    width: 65.3333333333%; }
+  .column.one-fourth, .column.three {
+    width: 22%; }
+  .column.one {
+    width: 4.6666666667%; }
+  .column.two {
+    width: 13.3333333333%; }
+  .column.four {
+    width: 30.6666666667%; }
+  .column.five {
+    width: 39.3333333333%; }
+  .column.seven {
+    width: 56.6666666667%; }
+  .column.eight {
+    width: 65.3333333333%; }
+  .column.nine {
+    width: 74%; }
+  .column.ten {
+    width: 82.6666666667%; }
+  .column.eleven {
+    width: 91.3333333333%; }
+  .column.offset-half, .column.offset-six {
+    margin-left: 52%; }
+  .column.offset-one-third {
+    margin-left: 34.6666666667%; }
+  .column.offset-two-thirds {
+    margin-left: 69.3333333333%; }
+  .column.offset-one-fourth {
+    margin-left: 26%; }
+  .column.offset-one {
+    margin-left: 8.6666666667%; }
+  .column.offset-two {
+    margin-left: 17.3333333333%; }
+  .column.offset-three {
+    margin-left: 26%; }
+  .column.offset-four {
+    margin-left: 34.6666666667%; }
+  .column.offset-five {
+    margin-left: 43.3333333333%; }
+  .column.offset-seven {
+    margin-left: 60.6666666667%; }
+  .column.offset-eight {
+    margin-left: 69.3333333333%; }
+  .column.offset-nine {
+    margin-left: 78%; }
+  .column.offset-ten {
+    margin-left: 86.6666666667%; }
+  .column.offset-eleven {
+    margin-left: 95.3333333333%; } }
+@media (max-width: 549px) {
+  .column {
+    margin-bottom: 2.5rem; } }
+
+/* ---- */
+/* Code */
+/* ---- */
+/* I recommend you use Prettify to help with this */
+pre {
+  overflow: visible; }
+
+code {
+  font-family: "Share Tech Mono", "Open Sans Mono", "Noto Mono", monospace;
+  font-size: 14pt; }
+
+span.code, p.code {
+  padding: 0.4rem;
+  font-family: "Share Tech Mono", "Open Sans Mono", "Noto Mono", monospace; }
+
+/* ------ */
+/* Tables */
+/* ------ */
+table {
+  width: 100%;
+  border: 1px dashed #ccc;
+  border-collapse: collapse;
+  border-radius: 3px;
+  margin-bottom: 1.5rem; }
+  table tr th {
+    border: 1px solid #ccc;
+    border-radius: 2px; }
+  table tr td {
+    border: 1px dashed #ccc; }
+  table tr td, table tr th {
+    padding: 1.5rem;
+    font-size: 10pt;
+    border-radius: 3px; }
+  table.striped {
+    border: 1px solid #ccc; }
+    table.striped tr:nth-child(even) {
+      background-color: #fafafa; }
+  @media (min-width: 600px) {
+    table {
+      width: 60%; } }
+
+/* ----- */
+/* Cards */
+/* ----- */
+.card {
+  background-color: #21364a;
+  width: 40rem;
+  padding: 5rem;
+  margin-bottom: 2.5rem !important;
+  margin: auto; }
+  .card:first-child, .cards:first-child {
+    margin-top: 5rem !important; }
+  .card.depth-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .card.depth-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .card.depth-3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .card.depth-4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .card.depth-5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+
+.card-disabled {
+  margin-top: -2.5rem;
+  margin: -5rem auto; }
+  .card-disabled .card-title {
+    color: #DAF2FF; }
+    .card-disabled .card-title:hover {
+      color: #F08B46;
+      cursor: pointer; }
+
+.card-title {
+  color: #F08B46;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem; }
+
+/* ------ */
+/* Footer */
+/* ------ */
+.footer {
+  width: 60rem;
+  text-align: center;
+  margin: -20% auto;
+  height: 2rem;
+  color: #33303b; }
+  .footer a {
+    text-decoration: none;
+    color: inherit; }
+  .footer a:hover {
+    color: #F08B46; }
+
+/* ------ */
+/* Custom */
+/* ------ */
+input,
+textarea {
+  background-color: inherit;
+  color: #DAF2FF;
+  border: none;
+  font-family: "Share Tech Mono", "Open Sans Mono", "Noto Mono", monospace; }
+
+input[type="submit"] {
+  cursor: pointer; }
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .homepage .head {
+    width: 100%;
+    color: #DAF2FF;
+    text-align: center; }
+    .homepage .head .container {
+      padding: 10rem 0 0 0; }
+      .homepage .head .container .title {
+        font-size: 4.5rem;
+        letter-spacing: 0.5rem; }
+        .homepage .head .container .title a {
+          vertical-align: middle;
+          text-decoration: none;
+          color: #DAF2FF; }
+  .homepage .hidden {
+    opacity: 0; }
+
+.main {
+  display: flex;
+  flex-direction: column; }
+  .main .head {
+    width: 100%;
+    background-color: #21364a;
+    color: #DAF2FF;
+    text-align: left; }
+    .main .head .alt {
+      color: #F08B46 !important; }
+    .main .head .container {
+      padding: 2rem 0; }
+      .main .head .container .row {
+        display: flex;
+        width: 100%; }
+        .main .head .container .row.reverse {
+          justify-content: flex-end; }
+        .main .head .container .row .title {
+          font-size: 2.5rem;
+          letter-spacing: 0.5rem;
+          vertical-align: middle;
+          margin: auto; }
+          .main .head .container .row .title a {
+            text-decoration: none;
+            color: #DAF2FF; }
+        .main .head .container .row .search-box {
+          width: 20rem; }
+  .main .main {
+    font-family: "Share Tech Mono", "Open Sans Mono", "Noto Mono", monospace; }
+    .main .main .container {
+      padding: 6rem; }
+  .main .motd p {
+    margin: 0 1.5rem; }
+  .main .post-list {
+    display: flex;
+    flex-direction: row;
+    min-height: 15rem;
+    max-height: 50rem; }
+    .main .post-list .link-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      flex-shrink: 1; }
+      .main .post-list .link-list .thread-link {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 15rem; }
+  .main .users {
+    display: flex;
+    margin: 0 1.5rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    height: auto;
+    justify-content: space-evenly; }
+    .main .users a::before {
+      content: ">> ";
+      color: #F08B46; }
+  .main .post-form {
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: row; }
+    .main .post-form form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 30rem;
+      min-height: 20rem; }
+
+hr {
+  border: 1px dashed #1d2f41;
+  width: 70%; }
+
+.back-link::before {
+  content: "<< ";
+  color: #F08B46; }
+
+.timestamp {
+  color: #5bc5ff; }
+
+.nick {
+  color: #f4a975; }
+
+/* -------- */
+/* Clearing */
+/* -------- */
+.container:after,
+.row:after {
+  content: "";
+  clear: both;
+  display: table; }
