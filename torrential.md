@@ -64,3 +64,14 @@ maintain it's composure. Be still... his whisper isn't heard by the others, and 
 
 2015-08-11 20:20:40  \|  Torrential fucking murders illu
 
+---
+
+2015-05-15 20:28:17	&Torrential	suck....cums
+
+---
+
+2015-05-16 13:18:01	&Torrential	If i'm putting my penis in you, I call you what I want
+
+---
+
+2015-05-16 15:54:21	&Torrential	I think my nephew is a communist
