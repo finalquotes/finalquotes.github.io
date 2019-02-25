@@ -75,3 +75,27 @@ maintain it's composure. Be still... his whisper isn't heard by the others, and 
 ---
 
 2015-05-16 15:54:21	&Torrential	I think my nephew is a communist
+
+---
+
+2015-05-19 20:56:58	+Torri	To be fair, circumcised penii are prettier
+
+---
+
+2015-05-23 17:27:11	&Torrential	                                                        
+
+2015-05-23 17:27:11	&Torrential	 mmmmmm m    m   mmm  m    m        mmmmm    mm     mmm 
+
+2015-05-23 17:27:11	&Torrential	 #      #    # m"   " #  m"         #   "#   ##   m"   "
+
+2015-05-23 17:27:11	&Torrential	 #mmmmm #    # #      #m#           #mmm#"  #  #  #     
+
+2015-05-23 17:27:11	&Torrential	 #      #    # #      #  #m         #       #mm#  #     
+
+2015-05-23 17:27:12	&Torrential	 #      "mmmm"  "mmm" #   "m        #      #    #  "mmm"
+
+2015-05-23 17:27:14	&Torrential	                                                        
+
+2015-05-23 17:27:16	&Torrential	
+
+

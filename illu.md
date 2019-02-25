@@ -36,4 +36,14 @@ permalink: /illu/
 
 2015-05-16 21:43:47	&illu	just sometimes i don't do it very well
 
+---
+
+2015-06-02 23:22:09	&illu	and i don't fucking know what a snackbar is
+
+---
+
+2015-06-06 21:27:33	&illu	there's no attractive feminists
+
+
+
 
