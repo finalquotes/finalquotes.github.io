@@ -44,6 +44,14 @@ permalink: /illu/
 
 2015-06-06 21:27:33	&illu	there's no attractive feminists
 
+---
+
+2015-06-13 19:39:42	&illu	What the fuck is up with 60% of our users being canadian
+
+2015-06-13 19:39:43	&illu	like
+
+2015-06-13 19:39:45	&illu	fucking seriously
+
 
 
 

@@ -81,3 +81,13 @@ permalink: /pac/
 2015-05-16 22:34:38	+pac	am i your friend?
 
 2015-05-16 22:34:42	+pac	can we touch butts?
+
+---
+
+2015-06-14 16:16:44	+pacvidja	one day i will get piss drunk and show all of you my dong
+2015-06-14 16:16:48	+pacvidja	and you will love it
+
+---
+
+2015-06-14 19:44:31	&pac	STRANGLING A BABY WITH MY SCROTUM IS MUSIC TOO
+2015-06-14 19:44:38	&pac	BUT YOU WOULD NOT DOWNLOAD THAT WOULD YOU
